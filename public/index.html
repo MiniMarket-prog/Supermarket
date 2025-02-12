@@ -11,22 +11,22 @@
   <header>
     <h1>Mini Market App</h1>
     <nav>
-      <a href="#products">Products</a>
-      <a href="#sales">Sales</a>
-      <a href="#stock">Stock</a>
-      <a href="#add-product">Add Product</a>
+      <button onclick="showSection('products')">Products</button>
+      <button onclick="showSection('sales')">Sales</button>
+      <button onclick="showSection('stock')">Stock</button>
+      <button onclick="showSection('add-product')">Add Product</button>
     </nav>
   </header>
 
   <main>
     <!-- Products Section -->
-    <section id="products">
+    <section id="products" class="content-section">
       <h2>Products</h2>
       <div id="product-list"></div>
     </section>
 
     <!-- Sales Section -->
-    <section id="sales">
+    <section id="sales" class="content-section" style="display: none;">
       <h2>Sales</h2>
       <form id="sale-form">
         <input type="text" id="barcode" placeholder="Scan barcode" required>
@@ -36,13 +36,13 @@
     </section>
 
     <!-- Stock Alerts Section -->
-    <section id="stock">
+    <section id="stock" class="content-section" style="display: none;">
       <h2>Stock Alerts</h2>
       <div id="stock-alerts"></div>
     </section>
 
     <!-- Add Product Section -->
-    <section id="add-product">
+    <section id="add-product" class="content-section" style="display: none;">
       <h2>Add Product</h2>
       <form id="add-product-form">
         <input type="text" id="product-name" placeholder="Product Name" required>
@@ -63,5 +63,20 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <!-- Include your app's JavaScript -->
   <script src="app.js"></script>
+  <script>
+    // Function to show/hide sections
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Show the Products section by default
+    showSection('products');
+  </script>
 </body>
 </html>
