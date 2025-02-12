@@ -47,6 +47,7 @@ document.getElementById('sale-form').addEventListener('submit', async (e) => {
     alert('Not enough stock!');
     return;
   }
+  
 
   // Update stock
   const newStock = product.stock - quantity;
@@ -88,7 +89,42 @@ async function fetchStockAlerts() {
     stockAlerts.appendChild(alertElement);
   });
 }
+// Add product form submission
+document.getElementById('add-product-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
+  // Get form values
+  const name = document.getElementById('product-name').value;
+  const price = parseFloat(document.getElementById('product-price').value);
+  const barcode = document.getElementById('product-barcode').value;
+  const stock = parseInt(document.getElementById('product-stock').value);
+  const image = document.getElementById('product-image').value;
+
+  // Validate inputs
+  if (!name || !price || !barcode || !stock || !image) {
+    alert('Please fill in all fields!');
+    return;
+  }
+
+  // Insert product into Supabase
+  const { data, error } = await supabase
+    .from('products')
+    .insert([{ name, price, barcode, stock, image }]);
+
+  if (error) {
+    console.error('Error adding product:', error);
+    alert('Failed to add product. Please try again.');
+    return;
+  }
+
+  // Clear the form
+  document.getElementById('add-product-form').reset();
+
+  // Refresh the product list
+  fetchProducts();
+
+  alert('Product added successfully!');
+});
 // Initialize
 fetchProducts();
 fetchStockAlerts();

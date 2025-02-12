@@ -49,3 +49,29 @@ body {
     bottom: 0;
     width: 100%;
   }
+  #add-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #add-product-form input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #add-product-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #add-product-form button:hover {
+    background-color: #45a049;
+  }
