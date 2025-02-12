@@ -1,7 +1,9 @@
 // Initialize Supabase
-const supabaseUrl = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxdXVoemZkeWp4Y216ZW9wdmNuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczOTM2MzAyMSwiZXhwIjoyMDU0OTM5MDIxfQ.l3jv03EdL0gRauoHwN17BVAw0_sXXkHN7CBMPgKGyu8';
-const supabaseKey = 'https://fquuhzfdyjxcmzeopvcn.supabase.co';
+const supabaseUrl = 'https://fquuhzfdyjxcmzeopvcn.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxdXVoemZkeWp4Y216ZW9wdmNuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczOTM2MzAyMSwiZXhwIjoyMDU0OTM5MDIxfQ.l3jv03EdL0gRauoHwN17BVAw0_sXXkHN7CBMPgKGyu8';
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+console.log('Supabase initialized:', supabase);
 
 // Fetch and display products
 async function fetchProducts() {
