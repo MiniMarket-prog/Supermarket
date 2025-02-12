@@ -6,7 +6,12 @@
         "use": "@vercel/static"
       }
     ],
-
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "public/index.html"
+      }
+    ],
     "headers": [
       {
         "source": "/service-worker.js",
