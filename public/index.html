@@ -14,15 +14,18 @@
       <a href="#products">Products</a>
       <a href="#sales">Sales</a>
       <a href="#stock">Stock</a>
+      <a href="#add-product">Add Product</a>
     </nav>
   </header>
 
   <main>
+    <!-- Products Section -->
     <section id="products">
       <h2>Products</h2>
       <div id="product-list"></div>
     </section>
 
+    <!-- Sales Section -->
     <section id="sales">
       <h2>Sales</h2>
       <form id="sale-form">
@@ -32,9 +35,23 @@
       </form>
     </section>
 
+    <!-- Stock Alerts Section -->
     <section id="stock">
       <h2>Stock Alerts</h2>
       <div id="stock-alerts"></div>
+    </section>
+
+    <!-- Add Product Section -->
+    <section id="add-product">
+      <h2>Add Product</h2>
+      <form id="add-product-form">
+        <input type="text" id="product-name" placeholder="Product Name" required>
+        <input type="number" id="product-price" placeholder="Price" required>
+        <input type="text" id="product-barcode" placeholder="Barcode" required>
+        <input type="number" id="product-stock" placeholder="Stock" required>
+        <input type="text" id="product-image" placeholder="Image URL" required>
+        <button type="submit">Add Product</button>
+      </form>
     </section>
   </main>
 
@@ -42,18 +59,9 @@
     <p>© 2023 Mini Market App</p>
   </footer>
 
+  <!-- Include Supabase JS -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <!-- Include your app's JavaScript -->
   <script src="app.js"></script>
-  <section id="add-product">
-    <h2>Add Product</h2>
-    <form id="add-product-form">
-      <input type="text" id="product-name" placeholder="Product Name" required>
-      <input type="number" id="product-price" placeholder="Price" required>
-      <input type="text" id="product-barcode" placeholder="Barcode" required>
-      <input type="number" id="product-stock" placeholder="Stock" required>
-      <input type="text" id="product-image" placeholder="Image URL" required>
-      <button type="submit">Add Product</button>
-    </form>
-  </section>
 </body>
 </html>
