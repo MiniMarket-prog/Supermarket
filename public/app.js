@@ -1,5 +1,5 @@
 // Initialize Supabase
-const supabaseUrl = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxdXVoemZkeWp4Y216ZW9wdmNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkzNjMwMjEsImV4cCI6MjA1NDkzOTAyMX0.h2P5N1RBHROE54D2CQ0a_Kx0h0RGwU9w2_i6X0o3lhw';
+const supabaseUrl = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxdXVoemZkeWp4Y216ZW9wdmNuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczOTM2MzAyMSwiZXhwIjoyMDU0OTM5MDIxfQ.l3jv03EdL0gRauoHwN17BVAw0_sXXkHN7CBMPgKGyu8';
 const supabaseKey = 'https://fquuhzfdyjxcmzeopvcn.supabase.co';
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
